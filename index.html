@@ -11,29 +11,28 @@
         <script src="https://kit.fontawesome.com/aad6d8149f.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <div id=page_one>
+        <header>
+            <div id="title">
+                <h2>
+                    <span typocolor="orange"><</span>
+                    <span typocolor="white">Nawi Dev.</span>
+                    <span typocolor="orange">/></span>
+                </h2>
+            </div>
+            <nav id=navbar>
+                <ul>
+                    <li ><a href="#page_four"><i class="fas fa-phone-square-alt"></i><b>|</b>Contact</a></li>
+                    <li><a href="#page_three"><i class="fas fa-archive"></i><b>|</b>Work</a></li>
+                    <li><a href="#page_two"><i class="fas fa-address-card"></i><b>|</b>About</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id=welcome-section>
             <img src="fondo.jpg">
-            <header>
-                <div id="title">
-                    <h1 typocolor="orange"><</h1>
-                    <h1 typocolor="white">Nawi Dev.</h1>
-                    <h1 typocolor="orange">/></h1>
-                </div>
-                <nav id=nav_none_responsive>
-                    <ul>
-                        <li ><a href="#page_four"><i class="fas fa-phone-square-alt"></i><b>|</b>Contact</a></li>
-                        <li><a href="#page_three"><i class="fas fa-archive"></i><b>|</b>Work</a></li>
-                        <li><a href="#page_two"><i class="fas fa-address-card"></i><b>|</b>About</a></li>
-                    </ul>
-                </nav>
-                <nav id=nav_responsive>
-                    <div class="fas fa-bars" href=""></div>
-                </nav>
-            </header>
             <article id=home>
                 <div id=home_page>
                     <h4 typocolor="orange"><</h4>
-                    <h3 typocolor="white">Hi, I'm <b typocolor="orange">Nahuel Mosse</b></h3>
+                    <h1 typocolor="white">Hi, I'm <b typocolor="orange">Nahuel Mosse</b></h1>
                     <h2 typocolor="white">Frontend & backend developer</h2>
                     <h4 typocolor="gray">//Design your own world</h4>
                     <h4 typocolor="orange">/></h4>
@@ -42,7 +41,7 @@
                     <img src="icons/ico.ico">
                 </div>
             </article>
-        </div>
+        </section>
         <div id=page_two>
             <div id=about_title>
                 <h3 typocolor="orange"><</h3>
@@ -77,17 +76,16 @@
                 </div>
             </div>
         </div>
-        <div id=page_three>
+        <section id=projects>
             <div id=work_title>
-                <h3 typocolor="orange"><</h3>
-                <h3 typocolor="white">Work</h3>
-                <h3 typocolor="orange">/></h3>
+                <h3 class="project-tile">
+                    <span typocolor="orange"><</span>
+                    <span typocolor="white">Work</span>
+                    <span typocolor="orange">/></span>
+                </h3>
             </div>
-            <div id=work></div>
-            <div id=work_usable>
-                <h3>Error 404 not found</h3>
-            </div>
-        </div>
+            <a href="https://calculadorainterescompuesto.000webhostapp.com/" target="_blank"><div id=work_usable></div></a>
+        </section>
         <footer id=page_four>
             <div id=contact_title>
                 <h5 typocolor="orange"><</h5>
@@ -96,8 +94,8 @@
             </div>
             <div id=contact>
                 <h6>nahuelgamail@gmail.com</h6>
-                <h6>+54 9 11 2161-5807</h6>
-                <p>All rights reserved</p>
+                <a id="profile-link" href="https://github.com/NahuelMosse" target="_blank">github</a>
+                <a href="https://www.linkedin.com/in/nahuelmosse" target="_blank">linkedin</a>
             </div>
         </footer>
     </body>
