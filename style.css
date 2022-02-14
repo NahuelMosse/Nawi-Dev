@@ -1,9 +1,13 @@
-
 /* F U L L */
 
 * {
     padding: 0;
     margin: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
 }
 
 body {
@@ -32,12 +36,12 @@ body {
 
 /* M A I N   P A G E*/
 
-#page_one {
-    height: 100vh;
+#welcome-section {
+    height: 100%;
     width: 100%;
 }
 
-#page_one > img {
+#welcome-section img {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -46,23 +50,24 @@ body {
 /* H E A D E R */
 
 header {
-    position: absolute;
+    position: fixed;
+    display: flex;
+    z-index: 2;
     height: auto;
-    width: 80%;
-    top: 5vh;
-    left: 10%;
+    width: 100%;
+    padding-top: 20px;
+    width: 90%;
+    left: 5%;
 }
 
 /* T I T L E */
 
 #title {
-    display: inline-block;
     height: 100%;
     width: auto;
 }
 
-h1 {
-    display: inline;
+#title h2 {
     font-family: 'IBM Plex Mono', monospace;
     text-shadow: 0.5vh 0.5vh #0a1529e1;
     font-size: 6vh;
@@ -70,9 +75,7 @@ h1 {
 
 /* N A V */
 
-/* N O N E   R E S P O N S I V E */
-
-#nav_none_responsive {
+#navbar {
     display: inline-block;
     position: absolute;
     height: 100%;
@@ -80,20 +83,20 @@ h1 {
     right: 0;
 }
 
-nav > ul {
+nav ul {
     position: absolute;
     height: auto;
     width: 100%;
     margin-top: 2.5vh;
 }
-nav > ul > li {
+nav ul li {
     display: inline;
     float: right;
     margin-left: 5%;
     text-shadow: 0.5vh 0.5vh #0a1529e1;
 }
 
-nav > ul > li > a {
+nav ul li a {
     text-decoration: none;
     color: white;
     font-family: 'IBM Plex Mono', monospace;
@@ -101,62 +104,20 @@ nav > ul > li > a {
     font-size: 3vh;
 }
 
-nav > ul > li > a > i {
+nav ul li a i {
     margin-right: 0%;
     font-size: 3vh;
     color: #FF8102;
 }
 
-nav > ul > li > a > b {
+nav ul li a b {
     color: #FF8102;
 }
 
-/* R E S P O N S I V E */
-
-#nav_responsive {
-    display: none;
-    position: absolute;
-    height: 100%;
-    width: 60%;
-    right: 0;
-}
-
-nav > div {
-    border:none;
-    background: none;
-    display: inline;
-    height: auto;
-    width: auto;
-    float: right;
-    margin: 0.7vh;
-    font-size: 5vh;
-    text-shadow: 0.5vh 0.5vh #0a1529e1;
-    color: #FF8102;
-}
-
-/*nav > div:active {
-    Falta JavaScript
-}*/
-
-@media only screen and (max-width: 1320px) {
-    header {
-        width: 90%;
-        left: 5%;
-    }
-}
-
-@media only screen and (max-width: 1075px) {
+@media (max-width: 1075px) {
 
     h1 {
         font-size: 4.5vh;
-    }
-
-    #nav_none_responsive {
-        display: none;
-    }
-
-    #nav_responsive {
-        display: inline-block;
     }
 
 }
@@ -188,13 +149,13 @@ nav > div {
     right: -6vh;
 }
 
-#home_img >img {
+#home_img img {
     height: 100%;
     width: 100%;
     object-fit: scale-down;
 }
 
-@media only screen and (max-width: 1540px) {
+@media (max-width: 1540px) {
 
     #home {
         width: 70%;
@@ -202,7 +163,7 @@ nav > div {
     }
 }
 
-@media only screen and (max-width: 1075px) {
+@media (max-width: 1075px) {
     
     #home {
         height:70vh;
@@ -243,7 +204,7 @@ nav > div {
     text-align: center;
 }
 
-#about_title > h3 {
+#about_title h3 {
     display: inline;
 }
 
@@ -269,7 +230,7 @@ nav > div {
     left: 20%;
 }
 
-@media only screen and (max-width: 1540px) {
+@media (max-width: 1540px) {
     #about {
         width: 80%;
         left: 10%;
@@ -317,19 +278,19 @@ nav > div {
     right: 5%;
 }
 
-#about_text > h3 {
+#about_text h3 {
     font-family: 'Rubik', sans-serif;
     color: white;
     font-size: 3vh;
 }
 
-#about_text > p {
+#about_text p {
     font-family: 'IBM Plex Mono', monospace;
     color: gray;
     font-size: 2.5vh;
 }
 
-#about_text > p > b {
+#about_text p b {
     color: #FF8102;
     font-size: 1.5vh;
 }
@@ -353,13 +314,13 @@ nav > div {
     left: 5%;
 }
 
-#about_skills > img {
+#about_skills img {
     height: 100%;
     margin-right: 2%;
     filter: invert(100%);
 }
 
-@media only screen and (max-width: 1075px) {
+@media (max-width: 1075px) {
     #about_img {
         position: static;
         width: 25%;
@@ -386,14 +347,14 @@ nav > div {
         top: 62vh;
     }
 
-    #about_skills > img {
+    #about_skills img {
         height: 50%;
     }
 }
 
 /* W O R K */
 
-#page_three {
+#projects {
     height: 100vh;
     width: 100%;
 }
@@ -411,20 +372,8 @@ nav > div {
     text-align: center;
 }
 
-#work_title > h3 {
+#work_title h3 {
     display: inline;
-}
-
-#work {
-    display: inline;
-    position: absolute;
-    height: 70vh;
-    width: 60%;
-    top: 220vh;
-    left: 20%;
-    background-color: white;
-    opacity: 10%;
-    border-radius: 5vh;
 }
 
 #work_usable {
@@ -433,17 +382,13 @@ nav > div {
     width: 60%;
     top: 220vh;
     left: 20%;
+    background-image: url(./Calcinterescompuesto.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
-#work_usable > h3 {
-    position: absolute;
-    top: 45%;
-    left: 40%;
-    font-family: 'IBM Plex Mono', monospace;
-    color: #FF8102;
-}
-
-@media only screen and (max-width: 1540px) {
+@media (max-width: 1540px) {
     #work {
         width: 80%;
         left: 10%;
@@ -474,7 +419,7 @@ nav > div {
     font-size: 4vh;
 }
 
-#contact_title > h5 {
+#contact_title h5 {
     display: inline;
 }
 
@@ -490,21 +435,24 @@ nav > div {
     font-size: 3vh;
 }
 
-#contact > h6 {
+#contact h6 {
     display: inline;
 }
 
-#contact > p {
+#contact a {
     margin-top: 1vh;
-    font-size: 1.5vh;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
 }
 
-@media only screen and (max-width: 1075px) {
+@media (max-width: 1075px) {
     #page_four {
         height: 17vh;
     }
 
-    #contact > h6 {
+    #contact h6 {
         display: block;
     }
 }
